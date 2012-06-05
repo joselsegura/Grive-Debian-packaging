@@ -1,9 +1,11 @@
 Source: grive
-Section: unknown
+Section: net
 Priority: extra
 Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
-Build-Depends: debhelper (>= 8.0.0)
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8.0.0), cmake, libssl-dev, libjson0-dev,
+ libcurl4-openssl-dev | libcurl-dev, libexpat-dev, binutils-dev,
+ libboost-filesystem-dev, libboost-system-dev
+Standards-Version: 3.9.3
 Homepage: https://github.com/match065/grive
 Vcs-Git: git://github.com/match065/grive.git
 
@@ -14,6 +16,6 @@ Description: GNU/Linux client for Google Drive
  Grive is a simple and lightweight Google Drive client for GNU/Linux
  written in C++.
  .
- It can syncronize a directory on your hard disk with your Google
+ It can synchronize a directory on your hard disk with your Google
  Drive account, downloading or uploading the files that are not in
  sync.
