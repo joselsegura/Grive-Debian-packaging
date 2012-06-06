@@ -19,3 +19,22 @@ Description: GNU/Linux client for Google Drive
  It can synchronize a directory on your hard disk with your Google
  Drive account, downloading or uploading the files that are not in
  sync.
+
+Package: libgrive0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library for access the Google Drive API
+ Libgrive is a library for accessing the Google Drive API in
+ C++. Google Drive is an online storage service provided by Google
+ Inc.
+
+Package: libgrive-dev
+Section: libdevel
+Architecture: any
+Depends: libgrive0 (= ${binary:Version}), ${misc:Depends}
+Description: Library for access the Google Drive API
+ Libgrive is a library for accessing the Google Drive API in
+ C++. Google Drive is an online storage service provided by Google
+ Inc.
+
