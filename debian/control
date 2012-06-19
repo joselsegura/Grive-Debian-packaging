@@ -2,39 +2,21 @@ Source: grive
 Section: net
 Priority: extra
 Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
-Build-Depends: debhelper (>= 8.0.0), cmake, libssl-dev, libjson0-dev,
- libcurl4-openssl-dev | libcurl-dev, libexpat-dev, binutils-dev,
- libboost-filesystem-dev, libboost-system-dev
+Build-Depends: debhelper (>= 9.0.0), cmake, hardening-wrapper,
+ libgcrypt-dev, libjson0-dev, libcurl4-gnutls-dev | libcurl-dev,
+ libexpat-dev, binutils-dev, libboost-filesystem-dev,
+ libboost-system-dev, libboost-program-options-dev
 Standards-Version: 3.9.3
-Homepage: https://github.com/match065/grive
-Vcs-Git: git://github.com/match065/grive.git
+Homepage: https://github.com/Grive/grive
+Vcs-Git: git://github.com/Grive/grive.git
 
 Package: grive
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: GNU/Linux client for Google Drive
+Description: Google Drive client for GNU/Linux
  Grive is a simple and lightweight Google Drive client for GNU/Linux
  written in C++.
  .
  It can synchronize a directory on your hard disk with your Google
  Drive account, downloading or uploading the files that are not in
  sync.
-
-Package: libgrive0
-Section: libs
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Library for access the Google Drive API
- Libgrive is a library for accessing the Google Drive API in
- C++. Google Drive is an online storage service provided by Google
- Inc.
-
-Package: libgrive-dev
-Section: libdevel
-Architecture: any
-Depends: libgrive0 (= ${binary:Version}), ${misc:Depends}
-Description: Library for access the Google Drive API
- Libgrive is a library for accessing the Google Drive API in
- C++. Google Drive is an online storage service provided by Google
- Inc.
-
