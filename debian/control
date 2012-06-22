@@ -2,10 +2,10 @@ Source: grive
 Section: net
 Priority: extra
 Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
-Build-Depends: debhelper (>= 9.0.0), cmake, hardening-wrapper,
- libgcrypt-dev, libjson0-dev, libcurl4-gnutls-dev | libcurl-dev,
- libexpat-dev, binutils-dev, libboost-filesystem-dev,
- libboost-system-dev, libboost-program-options-dev
+Build-Depends: debhelper (>= 9.0.0), cmake, libgcrypt-dev,
+ libjson0-dev, libcurl4-gnutls-dev | libcurl-dev, libexpat-dev,
+ binutils-dev, libboost-filesystem-dev, libboost-system-dev,
+ libboost-program-options-dev
 Standards-Version: 3.9.3
 Homepage: https://github.com/Grive/grive
 Vcs-Git: git://github.com/Grive/grive.git

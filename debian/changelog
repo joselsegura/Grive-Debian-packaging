@@ -1,4 +1,4 @@
-grive (0.1.1+20120619git-1) unstable; urgency=low
+grive (0.1.1+20120619git27g55c0f4e-1) unstable; urgency=low
 
   * Packaging master branch from Git
   * Some fixes about installing problems
