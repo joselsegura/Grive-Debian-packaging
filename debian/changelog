@@ -1,5 +1,5 @@
-grive (0.1.1+20120619git27g55c0f4e-1) unstable; urgency=low
+grive (0.2.0-1) unstable; urgency=low
 
   * First version for Debian (Closes: #675310)
 
- -- José Luis Segura Lucas <josel.segura@gmx.es>  Tue, 19 Jun 2012 08:11:08 +0200
+ -- José Luis Segura Lucas <josel.segura@gmx.es>  Mon, 09 Jul 2012 07:54:24 +0200

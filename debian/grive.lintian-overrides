@@ -1,1 +1,4 @@
+# Suspicius call to unprotected "read"
+# Called from libgrive/src/util/StdioFile.cc:103
+# always using the "sizeof" of the buffer to call "read".
 hardening-no-fortify-functions

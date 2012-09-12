@@ -4,8 +4,8 @@ Upstream-Contact: me@nestal.net
 Source: https://github.com/Grive/grive
 
 Files: *
-Copyright: 2012 Matchman Green and Nestal Wan
-License: GPL-2+
+Copyright: 2012 Nestal Wan
+License: GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
@@ -39,4 +39,4 @@ License: GPL-2+
  along with this program. If not, see <http://www.gnu.org/licenses/>
  .
  On Debian systems, the complete text of the GNU General
- Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
