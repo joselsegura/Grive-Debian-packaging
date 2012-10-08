@@ -2,6 +2,7 @@ Source: grive
 Section: net
 Priority: extra
 Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
+Uploaders: Cleto Martín <cleto@debian.org>
 Build-Depends: binutils-dev,
                cmake,
                debhelper (>= 9),
