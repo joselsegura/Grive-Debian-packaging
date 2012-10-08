@@ -2,9 +2,18 @@
 # -*- makefile -*-
 
 DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DB2MAN := /usr/share/sgml/docbook/stylesheet/xsl/nwalsh/manpages/docbook.xsl
 
 %:
 	dh $@
+
+override_dh_clean:
+	dh_clean
+	$(RM) debian/grive.1
+
+override_dh_build:
+	dh_build
+	xsltproc -o debian/grive.1 --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) debian/grive.xml
 
 override_dh_auto_test:
 	./obj-$(DEB_BUILD_GNU_TYPE)/libgrive/unittest
