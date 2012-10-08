@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
 "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
 
@@ -49,7 +48,7 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
   <!ENTITY dhfirstname "José Luís">
   <!ENTITY dhsurname   "Segura Lucas">
   <!-- dhusername could also be set to "&firstname; &surname;". -->
-  <!ENTITY dhusername  "&firstname; &surname;">
+  <!ENTITY dhusername  "José Luís Segura Lucas">
   <!ENTITY dhemail     "josel.segura@gmx.es">
   <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
        allowed: see man(7), man(1) and
@@ -130,7 +129,8 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
         <term><option>-a</option></term>
         <term><option>--auth</option></term>
         <listitem>
-          <para>Requests authorization token from Google.</para>
+          <para>Requests authorization token from Google and sync to
+	  current directory.</para>
         </listitem>
       </varlistentry>
 
