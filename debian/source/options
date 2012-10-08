@@ -1,2 +1,0 @@
-# ignore changes on config.{sub,guess}
-extend-diff-ignore = "(^|/)(icons)$"
