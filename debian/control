@@ -14,7 +14,8 @@ Build-Depends: binutils-dev,
                libexpat-dev,
                libgcrypt-dev,
                libjson0-dev,
-	       xsltproc
+	       xsltproc,
+ 	       docbook-xsl
 Standards-Version: 3.9.3
 Homepage: https://github.com/Grive/grive
 Vcs-Git: git://github.com/JoseLSegura/Grive-Debian-packaging.git
