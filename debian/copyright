@@ -22,7 +22,7 @@ License: GPL-2
  On Debian GNU/Linux systems, the complete text of the GNU General Public
  License version 2 can be found in `/usr/share/common-licenses/GPL-2'.
 
-Files: libgrive/src/bfd/SymbolInfo.* libgrive/src/bfd/Addr.hh: libgrive/src/bfd/Debug.*
+Files: libgrive/src/bfd/SymbolInfo.* libgrive/src/bfd/Addr.hh libgrive/src/bfd/Debug.*
 Copyright: 2006 Nestal Wan Wai Ho
 License: GPL-2
  This program is free software; you can redistribute it and/or modify
