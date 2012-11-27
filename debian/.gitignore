@@ -1,0 +1,5 @@
+*.debhelper.log
+*.substvars
+/files
+/grive.1
+/grive/
