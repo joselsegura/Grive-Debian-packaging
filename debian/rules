@@ -7,10 +7,6 @@ DB2MAN := /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
 %:
 	dh $@
 
-override_dh_clean:
-	dh_clean
-	$(RM) debian/grive.1
-
 override_dh_auto_build:
 	dh_auto_build
 	xsltproc -o debian/grive.1 --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) debian/grive.xml
