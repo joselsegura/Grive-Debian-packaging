@@ -11,6 +11,7 @@ debian/*.EX
 CMakeLists.txt
 COPYING
 README
+bgrive/*
 cmake/*
 grive/*
 icon/*
