@@ -1,3 +1,11 @@
+grive (0.3.0~git20130502-1) unstable; urgency=low
+
+  * New upstream version
+  * Bug fix: "Grive needs updating to 0.3.0", thanks to Jackson Doak
+    (Closes: #716664).
+
+ -- José Luis Segura Lucas <josel.segura@gmx.es>  Sat, 07 Sep 2013 18:51:30 +0200
+
 grive (0.2.0-1) unstable; urgency=low
 
   * First version for Debian (Closes: #675310)

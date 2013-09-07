@@ -4,11 +4,18 @@
 DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DB2MAN := /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
+PACKAGE_VERISON=$(shell head -1 debian/changelog | awk '{print $$2 }' | \
+	tr -d '()' | cut -d"-" -f1)
+
+UPSTREAM_ORIG=../grive_$(PACKAGE_VERISON).orig.tar.gz
 
 .PHONY: create-orig
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBoost_USE_MULTITHREADED=OFF
 
 override_dh_auto_build: debian/grive.1
 	dh_auto_build
@@ -19,13 +26,13 @@ override_dh_auto_test:
 %.1: %.xml
 	xsltproc -o $@ --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) $<
 
-create-orig: ../grive_0.3.0.orig.tar.xz
+create-orig: ../grive_$(PACKAGE_VERISON).orig.tar.xz
+
+$(UPSTREAM_ORIG):
+	wget https://github.com/Grive/grive/archive/master.tar.gz -O $@
 
 %.tar.xz: %.tar
 	xz $^
 
 %.tar: %.tar.gz
 	gunzip $^
-
-../grive_0.3.0.orig.tar.gz:
-	wget https://github.com/Grive/grive/archive/master.tar.gz -O ../grive_0.3.0.orig.tar.gz
