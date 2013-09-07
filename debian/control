@@ -13,7 +13,7 @@ Build-Depends: binutils-dev,
                libcurl4-gnutls-dev | libcurl-dev,
                libexpat-dev,
                libgcrypt-dev,
-               libjson0-dev,
+               libjson-c-dev,
 	       xsltproc,
  	       docbook-xsl
 Standards-Version: 3.9.3
