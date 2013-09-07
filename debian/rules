@@ -5,6 +5,8 @@ DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DB2MAN := /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
 
+.PHONY: create-orig
+
 %:
 	dh $@
 
@@ -16,3 +18,14 @@ override_dh_auto_test:
 
 %.1: %.xml
 	xsltproc -o $@ --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) $<
+
+create-orig: ../grive_0.3.0.orig.tar.xz
+
+%.tar.xz: %.tar
+	xz $^
+
+%.tar: %.tar.gz
+	gunzip $^
+
+../grive_0.3.0.orig.tar.gz:
+	wget https://github.com/Grive/grive/archive/master.tar.gz -O ../grive_0.3.0.orig.tar.gz
