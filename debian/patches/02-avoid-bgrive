@@ -1,0 +1,9 @@
+Index: Grive-Debian-packaging/CMakeLists.txt
+===================================================================
+--- Grive-Debian-packaging.orig/CMakeLists.txt	2013-05-02 18:40:04.000000000 +0200
++++ Grive-Debian-packaging/CMakeLists.txt	2013-09-09 01:11:25.619271499 +0200
+@@ -9,4 +9,3 @@
+ 
+ add_subdirectory( libgrive )
+ add_subdirectory( grive )
+-add_subdirectory( bgrive )

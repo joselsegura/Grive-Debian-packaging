@@ -15,6 +15,7 @@ Build-Depends: binutils-dev,
                libexpat-dev,
                libgcrypt-dev,
                libjson-c-dev,
+               libyajl-dev,
 	       xsltproc,
  	       docbook-xsl
 Standards-Version: 3.9.4
