@@ -17,6 +17,12 @@ UPSTREAM_ORIG=../grive_$(PACKAGE_VERISON).orig.tar.gz
 override_dh_auto_configure:
 	dh_auto_configure -- -DBoost_USE_MULTITHREADED=OFF
 
+override_dh_install:
+	dh_install --exclude=bgrive
+	# FIXME: the --exclude option doesnt work as expected, so I need
+	# to remove bgrive manually
+	rm debian/grive/usr/bin/bgrive
+
 override_dh_auto_build: debian/grive.1
 	dh_auto_build
 
