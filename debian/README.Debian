@@ -1,0 +1,18 @@
+The new verion of Grive includes a new graphical client called
+"bgrive". This program is only a proof of concept and it is still
+plenty of bugs. This reason and the fact that it would depend on
+libqt4-dev to be compiled has pushed me to include a patch that avoid
+the compilation of bgrive.
+
+Notes for libjsonc/libjson-c2 library
+-------------------------------------
+
+The library JSON-C in Debian is in transition from its old name
+(libjson0) to its new denomination (libjson-c2). I have changed the
+control file of the package to avoid depending on a transition package
+as libjson0-dev, but it is not enough to being able to compile Grive,
+because the include paths of the library has changed too. It was
+needed to include a patch to adapt the old-fashion include paths to
+the current ones.
+
+ -- José Luis Segura Lucas <josel.segura@gmx.es>, Tue, 10 Sep 2013 00:59:12 +0200

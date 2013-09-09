@@ -1,10 +1,14 @@
 grive (0.3.0~git20130502-1) unstable; urgency=low
 
-  * New upstream version
+  * New upstream version.
   * Bug fix: "Grive needs updating to 0.3.0", thanks to Jackson Doak
     (Closes: #716664).
+  * Avoid compilation of bgrive client (see README.Debian).
+  * Updated dependencies to avoid transition packages.
+  * Added rules to create the orig tarball from the Github master one.
+  * Corrections on the generated manpage
 
- -- José Luis Segura Lucas <josel.segura@gmx.es>  Sat, 07 Sep 2013 18:51:30 +0200
+ -- José Luis Segura Lucas <josel.segura@gmx.es>  Tue, 10 Sep 2013 00:48:58 +0200
 
 grive (0.2.0-1) unstable; urgency=low
 
