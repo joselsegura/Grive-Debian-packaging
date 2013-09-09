@@ -1,4 +1,5 @@
-Index: Grive-Debian-packaging/CMakeLists.txt
+Avoid the compilation of bgrive directory. Please, read README.Debian
+for more information.Index: Grive-Debian-packaging/CMakeLists.txt
 ===================================================================
 --- Grive-Debian-packaging.orig/CMakeLists.txt	2013-05-02 18:40:04.000000000 +0200
 +++ Grive-Debian-packaging/CMakeLists.txt	2013-09-09 01:11:25.619271499 +0200

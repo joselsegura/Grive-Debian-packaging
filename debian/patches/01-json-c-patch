@@ -1,4 +1,5 @@
-Index: Grive-Debian-packaging/cmake/Modules/FindJSONC.cmake
+Change JSOC-C include paths due to the transition from libjson0
+package to libjson-c2 in Debian UnstableIndex: Grive-Debian-packaging/cmake/Modules/FindJSONC.cmake
 ===================================================================
 --- Grive-Debian-packaging.orig/cmake/Modules/FindJSONC.cmake	2013-09-09 01:02:04.835068546 +0200
 +++ Grive-Debian-packaging/cmake/Modules/FindJSONC.cmake	2013-09-09 01:02:04.835068546 +0200
