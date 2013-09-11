@@ -15,4 +15,23 @@ because the include paths of the library has changed too. It was
 needed to include a patch to adapt the old-fashion include paths to
 the current ones.
 
- -- José Luis Segura Lucas <josel.segura@gmx.es>, Tue, 10 Sep 2013 00:59:12 +0200
+Overrides lintian info warnings
+-------------------------------
+
+The compiled grive binary will have lintian information warning:
+hardening-no-fortify-functions.
+
+The program is compiled with the appropriate CPPFLAGS options to
+enable de fortify check, but the binary included references to
+unprotected memcpy, memmove and read.
+
+memcpy and memmove usage can be safely ignored (read [1]), but the
+unprotected usage of read had need to be studied.
+
+The read call is only performed from a File::Read function, that is
+only called from other methods that checks if the values pased to
+File::Read, and then to read, are safe of use.
+
+Due to this reasons, I have decided to apply a lintian overrides file.
+
+ -- José Luis Segura Lucas <josel.segura@gmx.es>, Thu, 12 Sep 2013 00:26:21 +0200

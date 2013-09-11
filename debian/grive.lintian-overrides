@@ -1,0 +1,4 @@
+# Suspicius call to unprotected read
+# Called from libgrive/src/util/File.cc
+# Please read README.Debian to get more info
+hardening-no-fortify-functions
