@@ -34,4 +34,6 @@ File::Read, and then to read, are safe of use.
 
 Due to this reasons, I have decided to apply a lintian overrides file.
 
- -- José Luis Segura Lucas <josel.segura@gmx.es>, Thu, 12 Sep 2013 00:26:21 +0200
+[1] http://bugs.debian.org/673112
+
+ -- José Luis Segura Lucas <josel.segura@gmx.es>, Thu, 12 Sep 2013 15:58:28 +0200
