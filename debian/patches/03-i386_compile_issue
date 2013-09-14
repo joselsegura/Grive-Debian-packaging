@@ -1,0 +1,22 @@
+Fix for compiling in i386. Thanks to prplmnky in Github:
+https://github.com/Grive/grive/issues/193
+Index: Grive-Debian-packaging/libgrive/src/drive/State.cc
+===================================================================
+--- Grive-Debian-packaging.orig/libgrive/src/drive/State.cc	2013-05-02 18:40:04.000000000 +0200
++++ Grive-Debian-packaging/libgrive/src/drive/State.cc	2013-09-14 10:06:36.232179196 +0200
+@@ -248,12 +248,12 @@
+ void State::Write( const fs::path& filename ) const
+ {
+ 	Json last_sync ;
+-	last_sync.Add( "sec",	Json(m_last_sync.Sec() ) );
+-	last_sync.Add( "nsec",	Json(m_last_sync.NanoSec() ) );
++	last_sync.Add( "sec",	Json((boost::uint64_t)m_last_sync.Sec() ) );
++	last_sync.Add( "nsec",	Json((boost::uint64_t)m_last_sync.NanoSec() ) );
+ 	
+ 	Json result ;
+ 	result.Add( "last_sync", last_sync ) ;
+-	result.Add( "change_stamp", Json(m_cstamp) ) ;
++	result.Add( "change_stamp", Json((boost::uint64_t)m_cstamp) ) ;
+ 	
+ 	std::ofstream fs( filename.string().c_str() ) ;
+ 	fs << result ;
