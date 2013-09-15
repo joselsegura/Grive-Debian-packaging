@@ -1,5 +1,11 @@
-Fix for compiling in i386. Thanks to prplmnky in Github:
-https://github.com/Grive/grive/issues/193
+Description: Fix for compiling in i386.
+ The compilation in i386 architecture fails due to link errors.
+Origin: https://github.com/Grive/grive/issues/193
+Bug: https://github.com/Grive/grive/issues/193
+Author: prplmnky <dametriouspeyton@rocketmail.com>
+Reviewed-by: José Luis Segura Lucas <josel.segura@gmx.es>
+Last-Update: 2013-07-22
+
 Index: Grive-Debian-packaging/libgrive/src/drive/State.cc
 ===================================================================
 --- Grive-Debian-packaging.orig/libgrive/src/drive/State.cc	2013-05-02 18:40:04.000000000 +0200
