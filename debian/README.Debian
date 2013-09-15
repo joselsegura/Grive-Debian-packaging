@@ -1,39 +1,39 @@
-The new verion of Grive includes a new graphical client called
-"bgrive". This program is only a proof of concept and it is still
-plenty of bugs. This reason and the fact that it would depend on
-libqt4-dev to be compiled has pushed me to include a patch that avoid
-the compilation of bgrive.
+Notes for grive 0.3.0 and higher
+--------------------------------
+
+The new version of Grive includes a new graphical frontend called
+'bgrive'. This program is only a proof of concept and it is still in
+development. For this reason it has been decided to exclude it from
+this package until 'bgrive' reaches an acceptable quality.
 
 Notes for libjsonc/libjson-c2 library
 -------------------------------------
 
-The library JSON-C in Debian is in transition from its old name
-(libjson0) to its new denomination (libjson-c2). I have changed the
-control file of the package to avoid depending on a transition package
-as libjson0-dev, but it is not enough to being able to compile Grive,
-because the include paths of the library has changed too. It was
-needed to include a patch to adapt the old-fashion include paths to
-the current ones.
+JSON-C library is currently in transition from its old name (libjson0)
+to a new denomination (libjson-c2). debian/control file has been
+changed in order to avoid depending on a transitional package as
+libjson0-dev. However, it is not enough to be able to compile Grive
+successfully because the include paths have changed as well. Thus, it
+was needed to include a patch to adapt old-fashion include paths
+into current ones.
 
 Overrides lintian info warnings
 -------------------------------
 
-The compiled grive binary will have lintian information warning:
+lintian reports a warning message at Grive binary file:
 hardening-no-fortify-functions.
 
-The program is compiled with the appropriate CPPFLAGS options to
-enable de fortify check, but the binary included references to
-unprotected memcpy, memmove and read.
+Program is compiled using appropriate CPPFLAGS options to enable
+fortify checking but it also references to unprotected memcpy, memmove
+and read.
 
-memcpy and memmove usage can be safely ignored (read [1]), but the
-unprotected usage of read had need to be studied.
-
-The read call is only performed from a File::Read function, that is
-only called from other methods that checks if the values passed to
-File::Read, and then to read, are safe of use.
-
-Due to this reasons, I have decided to apply a lintian overrides file.
+The usage of memcpy() and memmove() can be safely ignored [1], but the
+unprotected usage of read() had to be studied deeply. read() call is
+only performed from File::Read function and this is only called from
+other methods which check whether passed values passed to File::Read
+are safe to use. Due to these reasons, it has been decided to apply a
+lintian overrides file.
 
 [1] http://bugs.debian.org/673112
 
- -- José Luis Segura Lucas <josel.segura@gmx.es>, Sat, 14 Sep 2013 10:45:12 +0200
+ -- Cleto Martín <cleto@debian.org>, Sun, 15 Sep 2013 19:29:06 +0100
