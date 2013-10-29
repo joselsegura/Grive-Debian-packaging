@@ -3,8 +3,7 @@ Section: net
 Priority: extra
 Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
 Uploaders: Cleto Martín <cleto@debian.org>
-Build-Depends: binutils-dev,
-               cmake,
+Build-Depends: cmake,
                debhelper (>= 9),
                libboost-filesystem-dev,
                libboost-program-options-dev,

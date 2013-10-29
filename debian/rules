@@ -27,9 +27,6 @@ override_dh_auto_test:
 	xsltproc -o $@ --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) $<
 
 create-orig: ../grive_$(PACKAGE_VERISON).orig.tar.xz
-	tar xfJ $^
-	mv grive-master/* .
-	rm -fr grive-master
 
 $(UPSTREAM_ORIG):
 	wget https://github.com/Grive/grive/archive/master.tar.gz -O $@
