@@ -7,8 +7,11 @@ grive (0.3.0~git20130502-1) unstable; urgency=low
   * Updated dependencies to avoid transition packages.
   * Added rules to create the orig tarball from the Github master one.
   * Corrections on the generated manpage
+  * Bug fix: "grive is not installable due to unmet dependencies", thanks
+    to Raf Czlonka (Closes: #725289).
 
  -- José Luis Segura Lucas <josel.segura@gmx.es>  Tue, 10 Sep 2013 00:48:58 +0200
+
 
 grive (0.2.0-1) unstable; urgency=low
 
