@@ -4,12 +4,10 @@
 DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DB2MAN := /usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl
-PACKAGE_VERISON=$(shell head -1 debian/changelog | awk '{print $$2 }' | \
-	tr -d '()' | cut -d"-" -f1)
+PACKAGE_VERSION=$(shell dpkg-parsechangelog --show-field Version | cut -d"-" -f1)
 
-UPSTREAM_ORIG=../grive_$(PACKAGE_VERISON).orig.tar.gz
+UPSTREAM_ORIG=../grive_$(PACKAGE_VERSION).orig.tar.xz
 
-.PHONY: create-orig
 
 %:
 	dh $@
@@ -26,13 +24,14 @@ override_dh_auto_test:
 %.1: %.xml
 	xsltproc -o $@ --param man.charmap.use.subset "0" --novalid --nonet $(DB2MAN) $<
 
-create-orig: ../grive_$(PACKAGE_VERISON).orig.tar.xz
+.PHONY: create-orig
+create-orig: $(UPSTREAM_ORIG)
 
 $(UPSTREAM_ORIG):
-	wget https://github.com/Grive/grive/archive/master.tar.gz -O $@
-
-%.tar.xz: %.tar
-	xz $^
-
-%.tar: %.tar.gz
-	gunzip $^
+	wget https://github.com/Grive/grive/archive/master.tar.gz
+	tar xzf master.tar.gz
+	rm master.tar.gz
+	mv grive-master grive-$(PACKAGE_VERSION)
+	tar -cf ../grive_$(PACKAGE_VERSION).orig.tar grive-$(PACKAGE_VERSION)
+	$(RM) -r grive-$(PACKAGE_VERSION)
+	xz ../grive_$(PACKAGE_VERSION).orig.tar

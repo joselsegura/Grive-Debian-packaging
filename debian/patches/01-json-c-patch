@@ -1,6 +1,6 @@
 Description: JSON-C lib adaptation
  Due to the transition of the denomination of JSON-C in Debian, the include
- paths has changed. This patch correct them.
+ paths have changed. This patch correct them.
 Origin: vendor
 Forwarded: not-needed
 Author: José Luis Segura Lucas <josel.segura@gmx.es>

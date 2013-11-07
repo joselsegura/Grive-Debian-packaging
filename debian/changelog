@@ -1,4 +1,4 @@
-grive (0.3.0~git20130502-1) unstable; urgency=low
+grive (0.3.0~git20131107-1) unstable; urgency=low
 
   * New upstream version.
   * Bug fix: "Grive needs updating to 0.3.0", thanks to Jackson Doak
