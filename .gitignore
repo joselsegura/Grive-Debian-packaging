@@ -1,19 +1,6 @@
-*~
-debian/*.ex
-debian/*.EX
-
-# Ignoring generated files
-*.o
-*.so
-*.a
-
-# Ignore upstream
-CMakeLists.txt
-COPYING
-README
-cmake/*
-grive/*
-icon/*
-libgrive/*
-package/*
-.pc/*
+.kdev4
+grive.kdev4
+.DS_Store
+.project
+.cproject
+build/

@@ -1,3 +1,11 @@
+grive (0.2.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build-depend on libiberty-dev instead of binutils-dev
+   (Closes: #725289, #730358)
+
+ -- David Prévot <taffit@debian.org>  Mon, 23 Dec 2013 16:48:34 -0400
+
 grive (0.2.0-1) unstable; urgency=low
 
   * First version for Debian (Closes: #675310)
