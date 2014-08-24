@@ -1,0 +1,35 @@
+Description: As notified in #745003, libjson upstream changed
+ compatibility layer. This patch just tweak include paths from json to
+ json-c.
+Author: Cleto Martin <cleto@debian.org>
+
+Index: grive/cmake/Modules/FindJSONC.cmake
+===================================================================
+--- grive.orig/cmake/Modules/FindJSONC.cmake
++++ grive/cmake/Modules/FindJSONC.cmake
+@@ -6,8 +6,8 @@
+ #  JSONC_INCLUDE_DIR - The JSON-C include directory.
+ #  JSONC_LIBRARY     - The JSON-C library to link against.
+ 
+-FIND_PATH(JSONC_INCLUDE_DIR json/json.h)
+-FIND_LIBRARY(JSONC_LIBRARY NAMES json)
++FIND_PATH(JSONC_INCLUDE_DIR json-c/json.h)
++FIND_LIBRARY(JSONC_LIBRARY NAMES json-c)
+ 
+ IF (JSONC_INCLUDE_DIR AND JSONC_LIBRARY)
+    SET(JSONC_FOUND TRUE)
+Index: grive/libgrive/src/protocol/Json.cc
+===================================================================
+--- grive.orig/libgrive/src/protocol/Json.cc
++++ grive/libgrive/src/protocol/Json.cc
+@@ -21,8 +21,8 @@
+ 
+ #include "util/StdioFile.hh"
+ 
+-#include <json/json_tokener.h>
+-#include <json/linkhash.h>
++#include <json-c/json_tokener.h>
++#include <json-c/linkhash.h>
+ 
+ #include <cassert>
+ #include <cstring>
