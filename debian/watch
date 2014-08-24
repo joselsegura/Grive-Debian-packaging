@@ -1,4 +1,0 @@
-version=3
-
-opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/grive-$1.tar.gz/ \
-  https://github.com/Grive/grive/tags .*/v?(\d\S*)\.tar\.gz

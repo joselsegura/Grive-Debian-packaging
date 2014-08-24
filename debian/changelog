@@ -1,5 +1,0 @@
-grive (0.2.0-1) unstable; urgency=low
-
-  * First version for Debian (Closes: #675310)
-
- -- José Luis Segura Lucas <josel.segura@gmx.es>  Mon, 09 Jul 2012 07:54:24 +0200
