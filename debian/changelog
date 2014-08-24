@@ -1,3 +1,12 @@
+grive (0.2.0-2) unstable; urgency=medium
+
+  * Bumped to version 3.9.5
+  * Updating VCS fields at debian/control to use collab-maint at git.d.o.
+  * Bug fix: "please update build-depends from libjson0-dev to
+    libjson-c-dev", thanks to Ondřej Surý (Closes: #745003).
+
+ -- Cleto Martín <cleto@debian.org>  Sun, 24 Aug 2014 16:34:41 +0100
+
 grive (0.2.0-1.1) unstable; urgency=medium
 
   * Non-maintainer upload.

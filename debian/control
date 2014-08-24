@@ -14,11 +14,12 @@ Build-Depends: cmake,
                libexpat-dev,
                libgcrypt-dev,
                libiberty-dev,
-               libjson0-dev,
+               libjson-c-dev,
                xsltproc
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: https://github.com/Grive/grive
-Vcs-Git: git://github.com/JoseLSegura/Grive-Debian-packaging.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/grive.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/grive.git;a=summary
 
 Package: grive
 Architecture: any
